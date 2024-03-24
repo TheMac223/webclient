@@ -40,11 +40,11 @@ void Widget::doDisconnected(){
 
 void Widget::doReadyRead(){
 
-    if(ui->cbSsl->isChecked()){
+    if(ui->cbSsl->isChecked())
         ui->pteMessage->insertPlainText(ssocket_.readAll()+"\n");
     else
         ui->pteMessage->insertPlainText(tsocket_.readAll()+"\n");
-}
+
 }
 
 void Widget::on_pbConnect_clicked()
